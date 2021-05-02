@@ -7,7 +7,12 @@ import (
 	"os"
 )
 
+var (
+	timeLimit = flag.Int("limit", 20, "time limit for the quiz in seconds")
+)
+
 func main() {
+
 	csvFilename := flag.String("csv", "problems.csv", "a csv file in the formato of 'question, answer'")
 	flag.Parse()
 
